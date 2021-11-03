@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Device info</title>
+    <link th:href="@{/styles/index.css}" rel="stylesheet" />
+</head>
+<body>
+    <h2>Requested device data:</h2>
+
+    <p th:text="'Device ID: ' + ${id}" />
+    <p th:text="'Device name: ' + ${name}" />
+    <p th:text="'Device owner: ' + ${owner}" />
+</body>
+</html>
