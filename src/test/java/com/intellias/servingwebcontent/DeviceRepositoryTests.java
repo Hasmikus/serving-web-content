@@ -15,6 +15,8 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
+
 @Testcontainers
 @DataMongoTest(excludeAutoConfiguration = EmbeddedMongoAutoConfiguration.class)
 public class DeviceRepositoryTests {
@@ -44,6 +46,6 @@ public class DeviceRepositoryTests {
 
         List<Device> devices = deviceRepository.findByOwner("HasmikK");
         System.out.println(devices.size());
-        //assertEquals(2, devices.size());
+        assertEquals(3, devices.size());
     }
 }
