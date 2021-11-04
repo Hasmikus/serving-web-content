@@ -38,13 +38,13 @@ public class DeviceRepositoryTests {
 
     @Test
     void shouldReturnListOfDevicesWithOwner() {
-        this.deviceRepository.save(new Device("Hasmik-nout-1", "HasmikK"));
-        this.deviceRepository.save(new Device("Hasmik-mobile-1", "HasmikK"));
-        this.deviceRepository.save(new Device("Hasmik-nout-2", "HasmikK"));
+        this.deviceRepository.save(new Device("Bob-nout-1", "Bob"));
+        this.deviceRepository.save(new Device("Bob-mobile-1", "Bob"));
+        this.deviceRepository.save(new Device("Bob-nout-2", "Bob"));
         this.deviceRepository.save(new Device("John-mobile-1", "JohnJ"));
 
 
-        List<Device> devices = deviceRepository.findByOwner("HasmikK");
+        List<Device> devices = deviceRepository.findByOwner("Bob");
         System.out.println(devices.size());
         assertEquals(3, devices.size());
     }

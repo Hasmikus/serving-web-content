@@ -42,6 +42,6 @@ public class ServingWebContentApplication implements CommandLineRunner {
 		for (Device device : repository.findByOwner("HasmikK")) {
 			System.out.println(device);
 		}
-		repository.deleteAll();
+//		repository.deleteAll();
 	}
 }
