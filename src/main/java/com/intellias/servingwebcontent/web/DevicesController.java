@@ -18,8 +18,8 @@ public class DevicesController {
         Device device = repository.findByName(name);
 
         model.addAttribute("name", name);
-        model.addAttribute("owner", device.owner);
-        model.addAttribute("id", device.id);
+        model.addAttribute("owner", device.getOwner());
+        model.addAttribute("id", device.getId());
 
         return "devices";
     }
