@@ -9,4 +9,5 @@ public interface DeviceRepository extends MongoRepository<Device, String> {
 
     public Device findByName(String name);
     public List<Device> findByOwner(String owner);
+    public void deleteDeviceById(String id);
 }

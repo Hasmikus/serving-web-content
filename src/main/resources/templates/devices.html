@@ -8,8 +8,24 @@
 <body>
     <h2>Requested device data:</h2>
 
-    <p th:text="'Device ID: ' + ${id}" />
-    <p th:text="'Device name: ' + ${name}" />
-    <p th:text="'Device owner: ' + ${owner}" />
+    <table>
+        <thead>
+        <tr>
+            <th> ID </th>
+            <th> Name </th>
+            <th> Owner </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:if="${devices.isEmpty()}">
+            <td colspan="2"> No Device Available </td>
+        </tr>
+        <tr th:each="device : ${devices}">
+            <td><span th:text="${device.getId()}"> Id </span></td>
+            <td><span th:text="${device.getName()}"> Id </span></td>
+            <td><span th:text="${device.getOwner()}"> Owner </span></td>
+        </tr>
+        </tbody>
+    </table>
 </body>
 </html>
