@@ -1,13 +1,15 @@
 package com.intellias.servingwebcontent;
 
-import com.intellias.servingwebcontent.model.*;
-import com.intellias.servingwebcontent.repository.*;
+import com.intellias.servingwebcontent.model.Device;
+import com.intellias.servingwebcontent.repository.DeviceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @SpringBootApplication
+@EnableMongoRepositories(basePackageClasses = DeviceRepository.class)
 public class ServingWebContentApplication implements CommandLineRunner {
 
 	@Autowired
