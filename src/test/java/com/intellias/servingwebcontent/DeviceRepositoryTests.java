@@ -19,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Testcontainers
 @DataMongoTest(excludeAutoConfiguration = EmbeddedMongoAutoConfiguration.class)
-public class DeviceViewRepositoryTests {
+public class DeviceRepositoryTests {
     @Container
     static MongoDBContainer mongoDBContainer = new MongoDBContainer("mongo:4.4.2");
 
@@ -48,4 +48,5 @@ public class DeviceViewRepositoryTests {
         System.out.println(devices.size());
         assertEquals(3, devices.size());
     }
+
 }
